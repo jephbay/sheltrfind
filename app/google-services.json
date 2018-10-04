@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "984853994356",
+    "firebase_url": "https://shelter-find.firebaseio.com",
+    "project_id": "shelter-find",
+    "storage_bucket": "shelter-find.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984853994356:android:ae0f7062a22ca9b6",
+        "android_client_info": {
+          "package_name": "shelterfind.android.example.com.shelterfind.shelterfind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984853994356-50pe3gtg07bc0rnhsupt55b11mh3hnco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAseAv9JjO3dsieYw5Y5nlco133iMxpAlw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

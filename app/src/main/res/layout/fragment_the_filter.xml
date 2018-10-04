@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    tools:context=".TheFilterFragment"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Base.V7.Widget.AppCompat.Toolbar"
+        android:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/jeph_toolbar"
+        android:background="@android:color/transparent"
+        android:title="@string/filter"
+
+
+        />
+
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/fth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/facility_type"
+                android:textAlignment="center"
+                android:textSize="18sp"
+
+                android:layout_marginTop="8dp"
+                />
+
+
+
+            <TableRow
+                android:id="@+id/trow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/i_button_back"
+                    android:src="@drawable/chevron_back"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:background="#f9f7f7"
+                    rsb:fabCustomSize="40dp"
+
+                    android:layout_marginStart="40dp"
+                    android:layout_gravity="start"
+
+
+                    />
+                <TextView
+                    android:id="@+id/t_box"
+                    android:text="Hostels"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+
+                    />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/i_button_forward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f9f7f7"
+
+                    rsb:fabCustomSize="40dp"
+                    android:src="@drawable/chevron_right"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="40dp"
+
+
+                    />
+
+
+            </TableRow>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/price_range"
+                android:textAlignment="center"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"
+
+                />
+
+            <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                rsb:absoluteMaxValue="100"
+                rsb:absoluteMinValue="0"
+
+
+                />
+
+            <TableLayout
+                android:id="@+id/t_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beds"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+
+                    android:layout_marginTop="8dp"
+                    />
+
+                <TableRow
+                    android:id="@+id/trow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/minus"
+                        android:src="@drawable/substract"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="#f9f7f7"
+                        android:layout_marginStart="40dp"
+
+                        rsb:fabCustomSize="40dp"
+
+
+                        />
+                    <TextView
+                        android:id="@+id/bed_num"
+                        android:text="1"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+
+                        />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/plus"
+                        android:src="@drawable/add"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="#f9f7f7"
+
+                        android:layout_marginEnd="40dp"
+
+                        rsb:fabCustomSize="40dp"
+                        />
+
+
+                </TableRow>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bedrooms2"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TableRow
+                    android:id="@+id/trow4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/minus2"
+                        android:src="@drawable/substract"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="#f9f7f7"
+
+                        android:layout_marginStart="40dp"
+                        rsb:fabCustomSize="40dp"
+                        />
+                    <TextView
+                        android:id="@+id/bedroom_num"
+                        android:text="1"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+
+                        />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/plus2"
+                        android:src="@drawable/add"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="#f9f7f7"
+
+                        android:layout_marginEnd="40dp"
+
+                        rsb:fabCustomSize="40dp"
+                        />
+
+
+                </TableRow>
+
+
+
+                <TextView
+                    android:text="@string/bed_sizes2"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+                <GridLayout
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="30dp"
+                    android:rowCount="5"
+
+
+
+                    >
+
+
+
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/twinsize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twin_single_size"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="10dp"
+
+                        />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/doublesize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/double_size"
+                        android:textSize="10sp"
+                        />
+
+
+
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/queensize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/queen_size"
+                        android:textSize="10sp" />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/olympicqueensize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/olympic_queen_size"
+                        android:textSize="10sp" />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/californiaqueensize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/california_queen_size"
+                        android:textSize="10sp" />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/kingsize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/king_size"
+                        android:textSize="10sp"
+                        android:layout_row="0"
+                        android:layout_column="13" />
+
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/californiakingsize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/california_king_size"
+                        android:textSize="10sp" />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/superkingsize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/super_king_size"
+                        android:textSize="10sp" />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/threequartersize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/three_quarter_size"
+                        android:textSize="10sp" />
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/smallsinglesize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/small_single_size"
+                        android:textSize="10sp" />
+
+
+
+
+
+
+
+
+                </GridLayout>
+
+            </TableLayout>
+
+
+            <TableLayout
+                android:id="@+id/t_layout2"
+                android:visibility="visible"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="211dp">
+
+                <TableRow android:id="@+id/t_row2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <TextView
+                        android:text="@string/room_type"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        />
+                </TableRow>
+
+                <TableRow>
+
+                    <ToggleButton
+                        android:id="@+id/single_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/single_bed"
+                        android:textOn="@string/single_bed"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="10sp"/>
+
+                    <ToggleButton
+                        android:id="@+id/female_dorm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/female_dorm"
+                        android:textOn="@string/female_dorm"
+                        tools:layout_editor_absoluteX="217dp"
+                        tools:layout_editor_absoluteY="396dp"
+                        android:layout_weight="1"
+                        android:textSize="10sp"/>
+
+                    <ToggleButton
+                        android:id="@+id/mixed_dorm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/mixed_dorm"
+                        android:textOn="@string/mixed_dorm"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="309dp"
+                        android:layout_weight="1"
+                        android:textSize="10sp"/>
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+
+                    <ToggleButton
+                        android:id="@+id/four_beds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/four_beds"
+                        android:textOn="@string/four_beds"
+                        tools:layout_editor_absoluteX="288dp"
+                        tools:layout_editor_absoluteY="203dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="10sp"/>
+
+
+                    <ToggleButton
+                        android:id="@+id/double_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/double_bed"
+                        android:textOn="@string/double_bed"
+                        tools:layout_editor_absoluteX="153dp"
+                        tools:layout_editor_absoluteY="203dp"
+                        android:layout_weight="1"
+                        android:textSize="10sp"/>
+
+
+                    <ToggleButton
+                        android:id="@+id/male_dorm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/male_dorm"
+                        android:textOn="@string/male_dorm"
+                        tools:layout_editor_absoluteX="280dp"
+                        tools:layout_editor_absoluteY="309dp"
+                        android:layout_weight="1"
+                        android:textSize="10sp"/>
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+
+                    <ToggleButton
+                        android:id="@+id/family_room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/family_room"
+                        android:textOn="@string/family_room"
+                        android:textSize="10sp"
+                        android:layout_gravity="center"/>
+
+
+                    <ToggleButton
+                        android:id="@+id/three_beds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggke_bck"
+
+                        android:textColor="@color/blacky"
+                        android:textOff="@string/three_beds"
+                        android:textOn="@string/three_beds"
+                        tools:layout_editor_absoluteX="148dp"
+                        tools:layout_editor_absoluteY="309dp"
+                        android:textSize="10sp"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
