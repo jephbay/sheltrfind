@@ -19,6 +19,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
 
@@ -96,6 +97,8 @@ dependencies {
 
     implementation 'com.github.clans:fab:1.6.4'
     implementation 'com.stepstone.apprating:app-rating:2.3.0'
+
+
 
 
 

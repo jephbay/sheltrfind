@@ -12,7 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import shelterfind.android.example.com.shelterfind.shelterfind.GridImageAdaptor
+import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.GridImageAdaptor
 import java.io.ByteArrayOutputStream
 
 class CompressAndUploadWorker: Worker() {

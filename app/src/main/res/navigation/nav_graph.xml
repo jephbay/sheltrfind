@@ -7,11 +7,11 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="findhome.com.example.android.findhomeb.MainActivity"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.MainActivity"
         android:label="MainActivity" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="findhome.com.example.android.findhomeb.ProfileFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile">
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/inboxFragment"
-        android:name="findhome.com.example.android.findhomeb.InboxFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.InboxFragment"
         android:label="fragment_inbox"
         tools:layout="@layout/fragment_inbox">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/placesFragment"
-        android:name="findhome.com.example.android.findhomeb.PlacesFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.PlacesFragment"
         android:label="fragment_places"
         tools:layout="@layout/fragment_places">
         <action
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/entryFormoneFragment"
-        android:name="findhome.com.example.android.findhomeb.EntryFormoneFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.EntryFormoneFragment"
         android:label="fragment_entry_formone"
         tools:layout="@layout/fragment_entry_formone" >
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/generalRoomTypeFragment"
-        android:name="findhome.com.example.android.findhomeb.GeneralRoomTypeFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.GeneralRoomTypeFragment"
         android:label="fragment_general_room_type"
         tools:layout="@layout/fragment_general_room_type" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/generalPriceFragment"
-        android:name="findhome.com.example.android.findhomeb.GeneralPriceFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.GeneralPriceFragment"
         android:label="fragment_general_price"
         tools:layout="@layout/fragment_general_price" >
         <action
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/hotelGeneralPriceFragment"
-        android:name="findhome.com.example.android.findhomeb.HotelGeneralPriceFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HotelGeneralPriceFragment"
         android:label="fragment_hotel_general_price"
         tools:layout="@layout/fragment_hotel_general_price" >
         <action
@@ -77,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/priceHostelFragment"
-        android:name="findhome.com.example.android.findhomeb.PriceHostelFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.PriceHostelFragment"
         android:label="fragment_hostelprice"
         tools:layout="@layout/fragment_hostelprice" >
         <action
@@ -87,7 +87,7 @@
     </fragment>
     <fragment
         android:id="@+id/overviewFragment"
-        android:name="findhome.com.example.android.findhomeb.OverviewFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.OverviewFragment"
         android:label="fragment_overview"
         tools:layout="@layout/fragment_overview" >
         <action
@@ -105,7 +105,7 @@
     </fragment>
     <fragment
         android:id="@+id/profilePictureFragment"
-        android:name="findhome.com.example.android.findhomeb.ProfilePictureFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.ProfilePictureFragment"
         android:label="fragment_profile_picture"
         tools:layout="@layout/fragment_profile_picture" >
         <action
@@ -114,7 +114,7 @@
     </fragment>
     <fragment
         android:id="@+id/addPlacePicturesFragment"
-        android:name="findhome.com.example.android.findhomeb.AddPlacePicturesFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.AddPlacePicturesFragment"
         android:label="fragment_add_place_pictures"
         tools:layout="@layout/fragment_add_place_pictures" >
         <action
@@ -123,7 +123,7 @@
     </fragment>
     <fragment
         android:id="@+id/amenitiesFragment"
-        android:name="findhome.com.example.android.findhomeb.AmenitiesFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.AmenitiesFragment"
         android:label="fragment_amenities"
         tools:layout="@layout/fragment_amenities" >
         <action
@@ -132,7 +132,7 @@
     </fragment>
     <fragment
         android:id="@+id/addressFragment"
-        android:name="findhome.com.example.android.findhomeb.AddressFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.AddressFragment"
         android:label="fragment_address"
         tools:layout="@layout/fragment_address" >
         <action
@@ -144,7 +144,7 @@
     </fragment>
     <fragment
         android:id="@+id/placeAvailability"
-        android:name="findhome.com.example.android.findhomeb.PlaceAvailability"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.PlaceAvailability"
         android:label="fragment_place_availability"
         tools:layout="@layout/fragment_place_availability" >
         <action
@@ -156,7 +156,7 @@
     </fragment>
     <fragment
         android:id="@+id/hostelRoomTypeFragment"
-        android:name="findhome.com.example.android.findhomeb.HostelRoomTypeFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HostelRoomTypeFragment"
         android:label="fragment_hostel_room_type"
         tools:layout="@layout/fragment_hostel_room_type" >
         <action
@@ -166,7 +166,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="findhome.com.example.android.findhomeb.HomeFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -187,7 +187,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkConnectionFragment"
-        android:name="findhome.com.example.android.findhomeb.CheckConnectionFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.CheckConnectionFragment"
         android:label="fragment_check_connection"
         tools:layout="@layout/fragment_check_connection" >
         <action
@@ -199,7 +199,7 @@
     </fragment>
     <fragment
         android:id="@+id/saveFragment"
-        android:name="findhome.com.example.android.findhomeb.SaveFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.SaveFragment"
         android:label="fragment_save"
         tools:layout="@layout/fragment_save" >
         <action
@@ -208,7 +208,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewFragment"
-        android:name="findhome.com.example.android.findhomeb.ViewFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.ViewFragment"
         android:label="fragment_view"
         tools:layout="@layout/fragment_view" >
         <action
@@ -217,22 +217,22 @@
     </fragment>
     <fragment
         android:id="@+id/hotelFragment"
-        android:name="findhome.com.example.android.findhomeb.HotelFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HotelFragment"
         android:label="fragment_hotel"
         tools:layout="@layout/fragment_hotel" />
     <fragment
         android:id="@+id/homeFilterFragment"
-        android:name="findhome.com.example.android.findhomeb.HomeFilterFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HomeFilterFragment"
         android:label="fragment_home_filter"
         tools:layout="@layout/fragment_home_filter" />
     <fragment
         android:id="@+id/hostelFragment"
-        android:name="findhome.com.example.android.findhomeb.HostelFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HostelFragment"
         android:label="fragment_hostel"
         tools:layout="@layout/fragment_hostel" />
     <fragment
         android:id="@+id/accountSettingsFragment"
-        android:name="findhome.com.example.android.findhomeb.AccountSettingsFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.AccountSettingsFragment"
         android:label="fragment_account_settings"
         tools:layout="@layout/fragment_account_settings" >
         <action
@@ -241,7 +241,7 @@
     </fragment>
     <fragment
         android:id="@+id/liftingStatus"
-        android:name="findhome.com.example.android.findhomeb.LiftingStatus"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.LiftingStatus"
         android:label="fragment_lifting_status"
         tools:layout="@layout/fragment_lifting_status" >
         <action
@@ -250,7 +250,7 @@
     </fragment>
     <fragment
         android:id="@+id/feedBackFragment"
-        android:name="findhome.com.example.android.findhomeb.FeedBackFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.FeedBackFragment"
         android:label="fragment_feed_back"
         tools:layout="@layout/fragment_feed_back" >
         <action
@@ -259,7 +259,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="findhome.com.example.android.findhomeb.SettingsFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -268,7 +268,7 @@
     </fragment>
     <fragment
         android:id="@+id/notificationFragment"
-        android:name="findhome.com.example.android.findhomeb.NotificationFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" >
         <action
@@ -277,7 +277,7 @@
     </fragment>
     <fragment
         android:id="@+id/manageFragment"
-        android:name="findhome.com.example.android.findhomeb.ManageFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.ManageFragment"
         android:label="fragment_manage"
         tools:layout="@layout/fragment_manage" >
         <action
@@ -290,7 +290,7 @@
 
     <fragment
         android:id="@+id/helpOptions"
-        android:name="findhome.com.example.android.findhomeb.HelpOptions"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HelpOptions"
         android:label="fragment_help_topics"
         tools:layout="@layout/fragment_help_topics" >
         <action
@@ -299,7 +299,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpNewFacility"
-        android:name="findhome.com.example.android.findhomeb.HelpNewFacility"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HelpNewFacility"
         android:label="HelpNewFacility" >
         <action
             android:id="@+id/action_helpNewFacility_to_helpOptions"
@@ -307,7 +307,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpEditFacility"
-        android:name="findhome.com.example.android.findhomeb.HelpEditFacility"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HelpEditFacility"
         android:label="fragment_help_edit_facility"
         tools:layout="@layout/fragment_help_edit_facility" >
         <action
@@ -316,7 +316,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpOverview"
-        android:name="findhome.com.example.android.findhomeb.HelpOverview"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HelpOverview"
         android:label="fragment_help_overview"
         tools:layout="@layout/fragment_help_overview" >
         <action
@@ -325,7 +325,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpUserAccounts"
-        android:name="findhome.com.example.android.findhomeb.HelpUserAccounts"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.HelpUserAccounts"
         android:label="fragment_help_user_accounts"
         tools:layout="@layout/fragment_help_user_accounts" >
         <action
@@ -334,7 +334,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment2"
-        android:name="findhome.com.example.android.findhomeb.SettingsFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.SettingsFragment"
         android:label="SettingsFragment">
         <action
             android:id="@+id/action_settingsFragment3_to_profileFragment"
@@ -344,7 +344,7 @@
 
     <fragment
         android:id="@+id/theFilterFragment"
-        android:name="findhome.com.example.android.findhomeb.TheFilterFragment"
+        android:name="shelterfind.android.example.com.shelterfind.shelterfind.TheFilterFragment"
         android:label="fragment_thefilter"
         tools:layout="@layout/fragment_the_filter">
         <action
