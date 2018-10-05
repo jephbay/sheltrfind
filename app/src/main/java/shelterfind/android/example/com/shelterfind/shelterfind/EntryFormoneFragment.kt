@@ -1,11 +1,9 @@
 package shelterfind.android.example.com.shelterfind.shelterfind
 
-import android.arch.lifecycle.ViewModelProviders
+
 import android.content.Context
-import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.button.MaterialButton
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
@@ -18,19 +16,9 @@ import android.widget.ProgressBar
 import android.widget.RadioGroup
 import androidx.navigation.Navigation
 import com.afollestad.materialdialogs.MaterialDialog
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import kotlinx.android.synthetic.main.fragment_account_settings.*
-import kotlinx.android.synthetic.main.fragment_entry_formone.*
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.async
-import kotlinx.coroutines.experimental.launch
 import shelterfind.android.example.com.shelterfind.shelterfind.MainActivity.Companion.Current_User
-import shelterfind.android.example.com.shelterfind.shelterfind.R
-import java.util.ArrayList
 
 
 class EntryFormoneFragment : Fragment() {

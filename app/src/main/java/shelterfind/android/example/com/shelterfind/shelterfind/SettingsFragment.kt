@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.list.listItemsSingleChoice
+import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.fragment_main_settings.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 
@@ -50,6 +51,11 @@ class SettingsFragment :Fragment(){
                 putBoolean("notifications", isChecked)
                 apply()
             }
+        }
+
+
+        settings_logout.setOnClickListener {
+            AuthUI.getInstance().signOut(this@SettingsFragment.context!!)
         }
 
     }

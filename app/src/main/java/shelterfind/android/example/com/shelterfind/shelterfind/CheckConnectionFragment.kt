@@ -5,7 +5,6 @@ import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
 import android.support.design.button.MaterialButton
-import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
@@ -13,11 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_hostelprice.*
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.async
-import kotlinx.coroutines.experimental.launch
-import shelterfind.android.example.com.shelterfind.shelterfind.R
 
 
 class CheckConnectionFragment : Fragment() {

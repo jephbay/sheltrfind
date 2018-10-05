@@ -41,7 +41,7 @@ class MyViewModel:ViewModel(){
                                 for (updocumentChange: DocumentChange in mquerySnapshot!!.documentChanges){
                                     mFirebaseFirestore
                                             .document("user/facilities")
-                                            .collection(mTarget!!).document(updocumentChange.document.id).collection(mTarget)
+                                            .collection(mTarget).document(updocumentChange.document.id).collection(mTarget)
                                             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
 
                                                 if (firebaseFirestoreException != null) {

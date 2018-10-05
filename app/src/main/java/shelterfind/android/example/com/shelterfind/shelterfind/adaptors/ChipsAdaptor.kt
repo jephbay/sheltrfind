@@ -2,6 +2,7 @@ package shelterfind.android.example.com.shelterfind.shelterfind.adaptors
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -32,7 +33,7 @@ class ChipsAdaptor(context:Context,itemList:ArrayList<String>,Htype:String ):Bas
 
 
         val chip_img=getitemm(mtype)
-        itemView.item_chip.chipIcon=mcontext.resources.getDrawable( chip_img, null)
+        itemView.item_chip.chipIcon=ContextCompat.getDrawable(mcontext,chip_img)
 
         return itemView
     }

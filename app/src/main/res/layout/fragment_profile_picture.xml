@@ -82,8 +82,6 @@
         app:maxImageSize="35dp" />
 
 
-
-
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"

@@ -3,7 +3,6 @@ package shelterfind.android.example.com.shelterfind.shelterfind
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,11 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.DocumentChange
-import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_all.*
-import shelterfind.android.example.com.shelterfind.shelterfind.R
 import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.HomeRecyclerViewAdaptor
 import shelterfind.android.example.com.shelterfind.shelterfind.model.CloudData
 import shelterfind.android.example.com.shelterfind.shelterfind.viewmodel.MyViewModel

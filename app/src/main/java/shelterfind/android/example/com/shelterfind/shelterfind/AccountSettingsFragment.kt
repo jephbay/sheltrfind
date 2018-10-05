@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.text.Editable
 import android.util.Log
 import android.view.LayoutInflater
@@ -117,7 +118,7 @@ class AccountSettingsFragment : Fragment() {
 
 
 
-                profile_edit.setImageDrawable(context!!.getDrawable(R.drawable.ic_save))
+                profile_edit.setImageDrawable( ContextCompat.getDrawable(context!!,R.drawable.ic_save))
                 profile_upload_image.visibility=View.VISIBLE
                 profile_name.isEnabled=true
                 profile_country.isEnabled=true
@@ -125,7 +126,7 @@ class AccountSettingsFragment : Fragment() {
 
             } else{
                 profile_upload_image.visibility=View.GONE
-                profile_edit.setImageDrawable(context!!.getDrawable(R.drawable.ic_mode_edit))
+                profile_edit.setImageDrawable(ContextCompat.getDrawable(context!!,R.drawable.ic_mode_edit))
                 profile_name.isEnabled=false
                 profile_country.isEnabled=false
                 check_edit=true

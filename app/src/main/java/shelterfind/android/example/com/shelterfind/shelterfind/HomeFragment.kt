@@ -1,27 +1,16 @@
 package shelterfind.android.example.com.shelterfind.shelterfind
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.chip.ChipGroup
-import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
-import com.google.firebase.firestore.DocumentChange
-import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_home.*
-import shelterfind.android.example.com.shelterfind.shelterfind.R
 import shelterfind.android.example.com.shelterfind.shelterfind.R.layout.fragment_home
 import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.CustomPagerAdaptor
 

@@ -3,15 +3,13 @@ package shelterfind.android.example.com.shelterfind.shelterfind
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.Toolbar
 import android.view.*
-
-import android.widget.Toolbar
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_the_filter.*
 import java.util.*
 
-import android.view.Menu
 
 
 class TheFilterFragment : Fragment() {

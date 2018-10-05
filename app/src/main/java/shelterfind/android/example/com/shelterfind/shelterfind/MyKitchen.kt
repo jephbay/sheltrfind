@@ -1,27 +1,14 @@
 package shelterfind.android.example.com.shelterfind.shelterfind
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.Address
-import android.location.Geocoder
-import android.location.Location
-import android.location.LocationManager
 import android.os.Build
-import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.util.Log
 import android.widget.ProgressBar
-import com.google.android.gms.location.places.Place
-import com.google.android.gms.location.places.PlaceDetectionClient
-import com.google.android.gms.location.places.PlaceLikelihoodBufferResponse
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.tasks.Task
-import java.io.IOException
-import java.util.*
-import kotlin.collections.ArrayList
 
 class MyKitchen {
 

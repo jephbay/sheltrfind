@@ -2,6 +2,7 @@ package shelterfind.android.example.com.shelterfind.shelterfind.adaptors
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +31,7 @@ class AmenitiesViewAdaptor(context: Context?,amenities:ArrayList<String>) : Base
         val amen_item=inflator.inflate(R.layout.view_amenities,null)
 
 
-        amen_item.amenities_view_image.setImageDrawable(mContext!!.getDrawable( resID) )
+        amen_item.amenities_view_image.setImageDrawable(ContextCompat.getDrawable(mContext!!,resID)  )
         amen_item.amenities_text.text=amen_name
 
         return amen_item

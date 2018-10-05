@@ -1,10 +1,8 @@
 package shelterfind.android.example.com.shelterfind.shelterfind
 
 import android.content.Context
-import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.button.MaterialButton
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
@@ -16,15 +14,11 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.navigation.Navigation
 import com.afollestad.materialdialogs.MaterialDialog
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.fragment_amenities.*
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.launch
 import shelterfind.android.example.com.shelterfind.shelterfind.AmenitiesListAdaptor.Companion.myAmenities
 import shelterfind.android.example.com.shelterfind.shelterfind.MainActivity.Companion.Current_User
-import shelterfind.android.example.com.shelterfind.shelterfind.R
 
 
 class AmenitiesFragment : Fragment() {

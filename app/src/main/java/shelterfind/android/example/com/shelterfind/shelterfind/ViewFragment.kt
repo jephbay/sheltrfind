@@ -2,25 +2,27 @@ package shelterfind.android.example.com.shelterfind.shelterfind
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.app.Activity.RESULT_OK
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
-import android.support.v7.widget.LinearLayoutManager
 import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.annotation.DrawableRes
 import androidx.navigation.Navigation
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -28,21 +30,20 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.viewpagerindicator.CirclePageIndicator
 import kotlinx.android.synthetic.main.fragment_view.*
-import androidx.work.impl.Schedulers.schedule
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.input.input
 import com.google.android.gms.maps.model.*
-import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import com.stepstone.apprating.AppRatingDialog
-import com.stepstone.apprating.listener.RatingDialogListener
-import findhome.com.example.android.findhomeb.AllFragment.Companion.mData
-import findhome.com.example.android.findhomeb.adaptors.*
-import findhome.com.example.android.findhomeb.model.CloudData
-import findhome.com.example.android.findhomeb.viewmodel.MyViewModel
-import findhome.com.example.android.findhomeb.viewmodel.SimilarFacilityViewModel
 import kotlinx.android.synthetic.main.fragment_view.view.*
+import shelterfind.android.example.com.shelterfind.shelterfind.AllFragment.Companion.mData
+import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.AmenitiesViewAdaptor
+import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.ChipsAdaptor
+import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.ImageSliderViewPagerAdaptor
+import shelterfind.android.example.com.shelterfind.shelterfind.adaptors.ReviewAdaptor
+import shelterfind.android.example.com.shelterfind.shelterfind.model.CloudData
+import shelterfind.android.example.com.shelterfind.shelterfind.viewmodel.SimilarFacilityViewModel
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -59,7 +60,7 @@ class ViewFragment : Fragment(),
     lateinit var mFirebaseFirestore: FirebaseFirestore
     lateinit var mViewModel: SimilarFacilityViewModel
     private var similarFacilityAdd:SimilarFacilityRecycleAdaptor? = null
-    lateinit var passingDataCloudData:CloudData
+    lateinit var passingDataCloudData: CloudData
     val REQUEST_CALL_PERMISSION=23
 
 
@@ -77,26 +78,39 @@ class ViewFragment : Fragment(),
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(mlocation.latitude,mlocation.longitude), 15f))
 
-//        val mymarker: Marker = mMap.addMarker(MarkerOptions()
-//                .position(LatLng(mlocation.latitude,mlocation.longitude)))
-//        mymarker.title=moverView["title"]
+        val mymarker: Marker = mMap.addMarker(MarkerOptions()
+                .position(LatLng(mlocation.latitude,mlocation.longitude)))
+        mymarker.title=moverView["title"]
 
 
-       // mymarker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker_34))
 
-        val circleOptions: CircleOptions = CircleOptions()
-                .center(LatLng(mlocation.latitude,mlocation.longitude))   //set center
-                .radius(500.00)   //set radius in meters
-                .fillColor(  0x40ff1000)  //semi-transparent
-                .strokeColor(Color.BLUE)
-                .strokeWidth(2f)
 
-        mMap.addCircle(circleOptions)
+        mymarker.setIcon(bitmapDescriptorFromVector(this@ViewFragment.context!!,R.drawable.ic_marker_34))
+
+//        val circleOptions: CircleOptions = CircleOptions()
+//                .center(LatLng(mlocation.latitude,mlocation.longitude))   //set center
+//                .radius(500.00)   //set radius in meters
+//                .fillColor(  0x40ff1000)  //semi-transparent
+//                .strokeColor(Color.BLUE)
+//                .strokeWidth(2f)
+//
+//        mMap.addCircle(circleOptions)
 
 
     }
 
 
+
+    private  fun bitmapDescriptorFromVector  ( context: Context , vectorDrawableResourceId:  Int):BitmapDescriptor {
+       val vectorDrawable:Drawable  = ContextCompat.getDrawable(context,vectorDrawableResourceId)!!
+        vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight())
+       val bitmap: Bitmap  = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888)
+       val canvas: Canvas  =  Canvas(bitmap)
+        vectorDrawable.draw(canvas)
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
+
+
+}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -370,7 +384,7 @@ class ViewFragment : Fragment(),
 
         if (list_comment.isNotEmpty()){
 
-            val review_daptor=ReviewAdaptor(this@ViewFragment.context!!,list_comment)
+            val review_daptor= ReviewAdaptor(this@ViewFragment.context!!,list_comment)
 
             reviews_list.adapter=review_daptor
 
@@ -384,19 +398,19 @@ class ViewFragment : Fragment(),
 
         about_description.text= moverView["description"]
         descript=moverView["description"]
-        val roomtype_chipsadaptor=ChipsAdaptor(this@ViewFragment.context!!,roomtypelist,passingDataCloudData.type!!)
+        val roomtype_chipsadaptor= ChipsAdaptor(this@ViewFragment.context!!,roomtypelist,passingDataCloudData.type!!)
 
         roomtype_list.adapter=roomtype_chipsadaptor
 
 
-        val amen_adaptor=AmenitiesViewAdaptor(this@ViewFragment.context,amenlist)
+        val amen_adaptor= AmenitiesViewAdaptor(this@ViewFragment.context,amenlist)
 
         showamenities_list.adapter=amen_adaptor
 
 
         if(imagelist!=null){
 
-            val slider_adaptor=ImageSliderViewPagerAdaptor(this@ViewFragment.context!!,imagelist!!)
+            val slider_adaptor= ImageSliderViewPagerAdaptor(this@ViewFragment.context!!,imagelist!!)
             pager.adapter=slider_adaptor
             val mIndicator= view.findViewById<CirclePageIndicator>(R.id.indicator)
 

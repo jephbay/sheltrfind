@@ -39,35 +39,35 @@ class FeedBackFragment : Fragment() {
 
         img1.setOnClickListener {
 
-            satisfaction.text="Dissatisfied"
+            satisfaction.text=getString(R.string.dissatisfied)
 
         }
 
 
         img2.setOnClickListener {
 
-            satisfaction.text="Normal"
+            satisfaction.text=getString(R.string.normal)
 
         }
 
 
         img3.setOnClickListener {
 
-            satisfaction.text="Satisfied"
+            satisfaction.text=getString(R.string.satisfied)
 
         }
 
 
         img4.setOnClickListener {
 
-            satisfaction.text="Very dissatisfied"
+            satisfaction.text=getString(R.string.verydissatisfied)
 
         }
 
 
         img5.setOnClickListener {
 
-            satisfaction.text="Very Satisfied"
+            satisfaction.text=getString(R.string.verysatisfied)
 
         }
 

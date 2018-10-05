@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,8 +15,6 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import android.support.v7.widget.Toolbar
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.fragment_account_settings.*
 import kotlinx.android.synthetic.main.fragment_hostel_room_type.*
 import shelterfind.android.example.com.shelterfind.shelterfind.MainActivity.Companion.Current_User
 

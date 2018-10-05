@@ -252,6 +252,13 @@
     <string name="logout">Logout</string>
     <string name="about1">About</string>
     <string name="about_shelterfind">About ShelterFind</string>
+    <string name="dissatisfied">Dissatisfied</string>
+    <string name="normal">Normal</string>
+    <string name="satisfied">Satisfied</string>
+    <string name="verydissatisfied">Very dissatisfied</string>
+    <string name="verysatisfied">Very Satisfied</string>
+    <string name="tap_to_rate_this_app">Tap to rate this app</string>
+    <string name="tap_to_logout">Tap to logout</string>
 
 
     <string-array name="settings_list_preference_titles_currency">
